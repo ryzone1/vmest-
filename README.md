@@ -138,3 +138,60 @@
 Очень нравиться первый вариант, только нужно будет перекрасить его в другие цвета   
 В процессе верстки пришел к выводу, что руки могут стать символом проекта, нужно обдумать эту мысль   
 
+ --- 
+
+ # Структура проекта
+
+Находится в зачаточном состоянии, но там и так все очень понятно, ибо проект еще маленький
+
+src/
+|-- assets/
+|   `-- react.svg
+|-- components/
+|   |-- articlesSection/
+|   |   |-- articlesSection.tsx
+|   |   `-- articlesSection.module.css
+|   |-- card/
+|   |   |-- card.tsx
+|   |   `-- card.module.css
+|   |-- chat/
+|   |   |-- chatButtons.tsx
+|   |   `-- chatButtons.module.css
+|   |-- header/
+|   |   |-- header.tsx
+|   |   `-- header.module.css
+|   |-- hero/
+|   |   |-- hero.tsx
+|   |   `-- hero.module.css
+|   |-- modal/
+|   |   |-- modal.tsx
+|   |   `-- modal.module.css
+|   `-- demo/
+|       `-- demoData.ts
+|-- local/
+|   `-- russian.tsx
+|-- ui/
+|   |-- App.tsx
+|   |-- App.css
+|   |-- index.css
+|   `-- main.tsx
+|-- public/
+|   `-- vite.svg
+`-- .gitignore
+`-- eslint.config.js
+`-- index.html
+`-- package-lock.json
+`-- package.json
+`-- README.md
+`-- tsconfig.app.json
+`-- tsconfig.json
+`-- tsconfig.node.json
+`-- vite.config.ts
+
+## App.tsx
+
+Основной компонент приложения. Этот компонент отвечает за управление состоянием модального окна, обработку действий пользователя (помощь / нуждаюсь в помощи), а также рендеринг основных секций интерфейса: шапка, хиро, кнопки чата, статьи и модальное окно
+
+## articlesSection.tsx
+
+Компонент секции статей.Отображает заголовок "Статьи" и список карточек статей, основанных на переданных данных. Каждая карточка содержит контент статьи, включающий заголовок, описание, изображение и ссылку.
