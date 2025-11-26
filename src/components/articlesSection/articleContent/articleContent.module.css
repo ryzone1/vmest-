@@ -1,0 +1,17 @@
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullWidthImg {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  margin: 10px 0 5px;
+}
+
+.description {
+  margin: 0;
+}
