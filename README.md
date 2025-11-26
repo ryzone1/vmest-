@@ -15,7 +15,7 @@
 Однако, масштабируя проект придем к тому, что вычислительные мощности, нужные для фильтрации сообщений неизбежно будут расти вместе с кол-вом пользователей, соответственно, нужно либо повышать мощности (что для некоммерческих проектов тяжело), либо оптимизировать алгоритмы. Лучше, конечно, сразу разработать/подсмотреть лёгкий и быстрый алгоритм.    
 Далее, если все таки проект действительно станет популярен и привлечет внимание, то нужно будет озаботиться юридическими вопросами.    
 С технической точки зрения, нужно будет решить, на чем писать бек, как его вообще писать, что использовать, что нужно и как реализовать, как обеспечить быстродействие и стабильность
-   
+
  --- 
 ## Технический реализовать собираюсь следующим образом:   
 ### Главная часть:   
@@ -49,9 +49,12 @@
    
 ## Ход реализации    
 ### Цвета   
+
 Согласно perplexity (знаю не самый надежный источник, но пока исследуем так):   
 В UI-дизайне самая успокаивающая цветовая палитра состоит из холодных и приглушенных оттенков, в частности синего и зеленого цветов. Эти цвета ассоциируются со спокойствием, стабильностью, доверием и природой, создают ощущение умиротворения и снижают уровень тревожности. Светло-голубые и приглушенные зеленые оттенки расслабляют и способствуют концентрации внимания, а темно-синие оттенки несут ощущение надежности. Кроме того, нейтральные оттенки (белый, серый, коричневый) часто используются как фоновые, усиливая успокаивающий эффект палитры.   
-**Основные успокаивающие цвета в UI:**   
+
+**Основные успокаивающие цвета в UI:**  
+
 - Синий (особенно приглушенные и темные оттенки) — ассоциируется с покоем и ответственностью.   
 - Голубой — расслабляет, улучшает концентрацию и ясность ума.   
 - Зеленый — символ природы, равновесия и здоровья, способствует снижению тревожности.   
@@ -61,53 +64,77 @@
 > Источники   
 
 [https://design-glory.com/psikhologhiia-tsvieta-v-ux-dizainie/](https://design-glory.com/psikhologhiia-tsvieta-v-ux-dizainie/)    
+
 [https://craftum.com/blog/psihologiya-cveta-v-veb-dizajne/](https://craftum.com/blog/psihologiya-cveta-v-veb-dizajne/)    
+
 [https://habr.com/ru/companies/alconost/articles/565438/](https://habr.com/ru/companies/alconost/articles/565438/)    
-[https://genius.space/ru/lab/psihologiya-tsvetov-v-veb-dizajne-kak-vybrat-tsvetovuyu-palitru-chtoby-povysit-konversiyu-sajtov/](https://genius.space/ru/lab/psihologiya-tsvetov-v-veb-dizajne-kak-vybrat-tsvetovuyu-palitru-chtoby-povysit-konversiyu-sajtov/)    
-[https://www.7flowers.ru/blog/psikhologiya-tsveta-kak-ottenki-vliyayut-na-nastroenie/](https://www.7flowers.ru/blog/psikhologiya-tsveta-kak-ottenki-vliyayut-na-nastroenie/)    
-[https://ux.pub/editorial/vosiem-pravil-o-tsvietovykh-palitrakh-kotoryie-dolzhien-znat-kazhdyi-2bkh](https://ux.pub/editorial/vosiem-pravil-o-tsvietovykh-palitrakh-kotoryie-dolzhien-znat-kazhdyi-2bkh)    
-[https://web-valley.ru/articles/tpost/gc0a74ar21-psihologiya-tsveta-znachenie-vliyanie-is](https://web-valley.ru/articles/tpost/gc0a74ar21-psihologiya-tsveta-znachenie-vliyanie-is)    
+
+[https://genius.space/ru/lab/psihologiya-tsvetov-v-veb-dizajne-kak-vybrat-tsvetovuyu-palitru-chtoby-povysit-konversiyu-sajtov/](https://genius.space/ru/lab/psihologiya-tsvetov-v-veb-dizajne-kak-vybrat-tsvetovuyu-palitru-chtoby-povysit-konversiyu-sajtov/)
+
+[https://www.7flowers.ru/blog/psikhologiya-tsveta-kak-ottenki-vliyayut-na-nastroenie/](https://www.7flowers.ru/blog/psikhologiya-tsveta-kak-ottenki-vliyayut-na-nastroenie/)
+
+[https://ux.pub/editorial/vosiem-pravil-o-tsvietovykh-palitrakh-kotoryie-dolzhien-znat-kazhdyi-2bkh](https://ux.pub/editorial/vosiem-pravil-o-tsvietovykh-palitrakh-kotoryie-dolzhien-znat-kazhdyi-2bkh)
+
+[https://web-valley.ru/articles/tpost/gc0a74ar21-psihologiya-tsveta-znachenie-vliyanie-is](https://web-valley.ru/articles/tpost/gc0a74ar21-psihologiya-tsveta-znachenie-vliyanie-is)
+
 Согласно вышеизложенному, выбор стоит между синими и зелеными оттенками, доп. серые тона, несколько цветовых палитр, которые я выбрал:   
    
 **Зеленые тона**   
-![image](files\image.png)    
-[https://coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8](https://coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8)    
-![image](files\image_y.png)    
-[https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46](https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46)    
-![image](files\image_5.png)    
-[https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41](https://coolors.co/palette/dad7cd-a3b18a-588157-3a5a40-344e41)    
+
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image.png)
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image2.png)
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image3.png)
+
+
 **Синие тона**   
-![image](files\image_b.png)    
-[https://coolors.co/palette/000000-2f4550-586f7c-b8dbd9-f4f4f9](https://coolors.co/palette/000000-2f4550-586f7c-b8dbd9-f4f4f9)    
-![image](files\image_h.png)    
-[https://coolors.co/palette/e0fbfc-c2dfe3-9db4c0-5c6b73-253237](https://coolors.co/palette/e0fbfc-c2dfe3-9db4c0-5c6b73-253237)    
-![image](files\image_8.png)    
-[https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd](https://coolors.co/palette/0d1b2a-1b263b-415a77-778da9-e0e1dd)    
+
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image4.png)
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image5.png)
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/image6.png)
+
  --- 
 ### UI\UX, макеты и так далее   
-Для проектирования удобного и функционального UX следует пройти несколько ключевых шагов, последовательно направленных на понимание пользователя, создание структуры продукта и тестирование решения.   
+Для проектирования удобного и функционального UX следует пройти несколько ключевых шагов, последовательно направленных на понимание пользователя, создание структуры продукта и тестирование решения. 
+
 1. **Определение цели проекта и объема работы**
-Важно четко сформулировать, какую проблему должен решить продукт, и какие задачи должны быть выполнены. На этом этапе взаимодействуют представители бизнеса, продукта, дизайна и технической команды.   
+
+Важно четко сформулировать, какую проблему должен решить продукт, и какие задачи должны быть выполнены. На этом этапе взаимодействуют представители бизнеса, продукта, дизайна и технической команды.  
+
 2. **Исследование пользователей и аналитика**
+
 Изучить целевую аудиторию через количественные и качественные методы: опросы, интервью, анализ поведения с помощью аналитических инструментов (Google Analytics, тепловые карты и др.). Также анализируют конкурентов, чтобы выявить их сильные и слабые стороны.   
+
 3. **Формирование портретов пользователей и карточек эмпатии**
+
 Создают типичные образы пользователей (персоны) и рисуют их пользовательские пути и эмоции, чтобы понять мотивации и проблемы.   
+
 4. **Проектирование архитектуры продукта и пользовательских сценариев**
+
 Определяют ключевые разделы, логику навигации и создают user-flow — схемы взаимодействия пользователя с интерфейсом.   
+
 5. **Создание вайрфреймов (каркасных прототипов)**
+
 Разрабатывают черно-белые эскизы экранов, чтобы визуализировать расположение элементов без дизайна, выявить и откорректировать логику.   
+
 6. **Разработка визуального дизайна**
+
 Определяют стилистику: цвета, шрифты, иконки, визуальную иерархию для создания привлекательного и понятного интерфейса.   
+
 7. **Тестирование и сбор обратной связи**
+
 Проверяют прототипы и готовый продукт на реальных пользователях, отслеживают метрики использования и выявляют проблемы для улучшения.   
+
 8. **Передача дизайна разработчикам и контроль качества**
+
 Обеспечивают корректное внедрение и работоспособность UX решений в продукте.   
    
 Эти шаги формируют цикл проектирования удобного и функционального пользовательского опыта, который ориентирован на реальные нужды и комфорт пользователей, а не только на технические возможности   
+
 **Сверху то, как должно быть, но я пока что сэкономлю время и накидаю парочку макетов используя ИИ**   
-![1758034219](files\1758034219.png)    
-![1758034337](files\1758034337.png)    
-![Signature: IBc8iKWBcUpAny4XxLeGuEpg+RC86NJfjQms1KB/mbKitx92ELm/KgkZEOXsYfs8Pez4BPv22cXCWUyp0Qb8Ca9CWF0OeE/0FkBB4SFaQXAODPw2QQU3JJM9iMySEe+u+SC0k5XUITvqhaXIiLgBk+6qYmPGuXwOFb+9Toihkw8=](files\signature-ibc8ikwbcupany4xxleguepg-rc86njfjqms.png)    
+
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/1758034219.png)
+![Иллюстрация](https://github.com/ryzone1/vmest-/raw/main/imges/1758034337.png)
+
 Очень нравиться первый вариант, только нужно будет перекрасить его в другие цвета   
 В процессе верстки пришел к выводу, что руки могут стать символом проекта, нужно обдумать эту мысль   
 
